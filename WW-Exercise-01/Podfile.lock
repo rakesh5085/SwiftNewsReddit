@@ -1,0 +1,20 @@
+PODS:
+  - SwiftHash (2.0.2)
+  - SwiftLint (0.41.0)
+
+DEPENDENCIES:
+  - SwiftHash (~> 2.0)
+  - SwiftLint
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - SwiftHash
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  SwiftHash: 6d312abe61c8359bdef8d0093642f3a70b1c17ba
+  SwiftLint: c585ebd615d9520d7fbdbe151f527977b0534f1e
+
+PODFILE CHECKSUM: db83127e260ffd4ce53f8479b719841dd88d46e0
+
+COCOAPODS: 1.9.3

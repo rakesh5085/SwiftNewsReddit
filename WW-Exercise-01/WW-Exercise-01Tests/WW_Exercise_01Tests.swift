@@ -1,0 +1,45 @@
+//
+//  WW_Exercise_01Tests.swift
+
+
+import XCTest
+@testable import WW_Exercise_01
+
+class WW_Exercise_01Tests: XCTestCase {
+    
+    func testParsing() throws {
+        let json: [String: Any] = [
+            "title": "Using the same Swift code in iOS and macOS app.",
+            "thumbnail": "self"
+        ]
+        
+        let data = try JSONSerialization.data(withJSONObject: json, options: [])
+        let decoder = JSONDecoder()
+        let article = try decoder.decode(Article.self, from: data)
+        
+        XCTAssertEqual(article.title, "Using the same Swift code in iOS and macOS app.")
+    }
+    
+    override func setUp() {
+        super.setUp()
+        // Put setup code here. This method is called before the invocation of each test method in the class.
+    }
+    
+    override func tearDown() {
+        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        super.tearDown()
+    }
+    
+    func testExample() {
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    }
+    
+    func testPerformanceExample() {
+        // This is an example of a performance test case.
+        self.measure {
+            // Put the code you want to measure the time of here.
+        }
+    }
+    
+}
